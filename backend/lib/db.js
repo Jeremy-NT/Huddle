@@ -1,13 +1,15 @@
 //connecting to the database using mongoose
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config(); // load environment variables from a .env file into process.env
 
 // function to connect to the database and handle any errors that may occur during the connection process
 async function connectDB(){
     try{
-        const mongoUri = process.env.MONGO_URI;
+        const mongoUri = process.env.MONGODB_URI; // retrieve the MongoDB connection URI from the environment variables
 
         if(!mongoUri){
-            throw new Error("Mongo_URI is required in the .env") // check if the MONGO_URI environment variable is defined. If not, throw an error.
+            throw new Error("MONGODB_URI is required in the .env") // check if the MONGODB_URI environment variable is defined. If not, throw an error.
         }
 
         await mongoose.connect(mongoUri); 
