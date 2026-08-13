@@ -1,8 +1,7 @@
 //connecting to the database using mongoose
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-dotenv.config(); // load environment variables from a .env file into process.env
-
+dotenv.config(); // load environment variables from a .env file into process.env 
 // function to connect to the database and handle any errors that may occur during the connection process
 async function connectDB(){
     try{
