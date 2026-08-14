@@ -3,8 +3,8 @@ import connectDB from '../lib/db.js';
 import 'dotenv/config.js'; // Load environment variables from .env file
 import User from '../models/user.model.js';
 import {clerkMiddleware} from '@clerk/express';
-import cors from 'cors';
-import fs from fs; // Import the file system module to handle file operations
+import cors from 'cors'; // Import the CORS middleware to handle cross-origin requests
+import fs from 'fs'; // Import the file system module to handle file operations
 import path from 'path'; // Import the path module to handle file and directory paths
 
 const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
