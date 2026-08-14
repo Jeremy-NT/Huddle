@@ -1,5 +1,5 @@
 import express from 'express';
-import connectDB from './lib/db.js';
+import connectDB from '../lib/db.js';
 import 'dotenv/config.js'; // Load environment variables from .env file
 import User from './models/user.model.js';
 import {clerkMiddleware} from '@clerk/express';
