@@ -34,8 +34,6 @@ COPY backend/package.json backend/package-lock.json ./
 RUN npm install --omit=dev --no-audit --no-fund && npm cache clean --force
 
 COPY --from=backend-build /app/dist ./dist
-COPY --from=backend-build /app/lib ./lib
-COPY --from=backend-build /app/models ./models
 COPY --from=frontend-build /app/frontend/dist ./public
 
 EXPOSE 3001
