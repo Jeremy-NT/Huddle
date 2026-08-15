@@ -28,6 +28,8 @@ if (fs.existsSync(publicDir)) {
  })/// Serve the index.html file for any unmatched routes
 }
 app.listen(PORT, () => {
-    connectDB();
-    console.log(`Server is running on port ${PORT}`);
-}); // Start the server and connect to the database, logging a message to indicate that the server is running
+    connectDB(); // connecting to the database
+    console.log(`Server is running on port ${PORT}`);// start the server and log a message to indicate that the server is running
+
+    if(process.env.NODE_ENV=="production") job.start();
+}); 
