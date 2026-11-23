@@ -7,7 +7,8 @@ import cors from 'cors'; // Import the CORS middleware to handle cross-origin re
 import fs from 'fs'; // Import the file system module to handle file operations
 import path from 'path'; // Import the path module to handle file and directory paths
 import authRoutes from './routes/auth.route.js';
-
+import job from './lib/cron.js'; 
+import {clerkWebhook} from "./controllers/webhook.controller.js"
 
 const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
 const app = express(); // Create an instance of the Express application
